@@ -1,3 +1,10 @@
+/*
+Jhonatan da Silva
+Last Updated version :
+Mon Feb  6 16:18:13 2017
+Number of code lines: 
+25
+*/
 #define disparar 4
 #define IdaVolta 5
 
