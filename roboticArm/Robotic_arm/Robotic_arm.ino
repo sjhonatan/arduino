@@ -1,3 +1,11 @@
+/*
+Jhonatan da Silva
+Cassiano Bonin
+Last Updated version :
+Tue Jan 31 18:04:30 2017
+Number of code lines: 
+131
+*/
 #include <Stepper.h>
 #include <Servo.h>
 #define steps_pdegree 5.68
