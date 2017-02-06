@@ -1,4 +1,11 @@
 /*
+Jhonatan da Silva
+Last Updated version :
+Mon Feb  6 16:19:42 2017
+Number of code lines: 
+41
+*/
+/*
   Finite_Robotic_Machine.h - Library for flashing FSM code.
   Created by Jhonatan da Silva, November 27, 2016.
   Released into the public domain.
