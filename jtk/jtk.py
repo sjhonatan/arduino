@@ -1,9 +1,9 @@
 """
 Jhonatan da Silva
 Last Updated version :
-Wed Feb  8 23:35:42 2017
+Thu Feb  9 19:29:46 2017
 Number of code lines: 
-13
+18
 """
 import serial 
 import io
@@ -16,5 +16,10 @@ class Jtk():
     
     def ativarUltrassonico(self):
         ser.write(b'U')
+
+    def ativarLCD(self):
+        ser.write(b'L')
+    
 while True:
-    Jtk().ativarUltrassonico()
+    Jtk().ativarLCD()
+    time.sleep()
