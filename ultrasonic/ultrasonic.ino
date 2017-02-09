@@ -1,32 +1,48 @@
 /*
 Jhonatan da Silva
 Last Updated version :
-Mon Feb  6 16:18:13 2017
+Wed Feb  8 23:38:10 2017
 Number of code lines: 
-25
+41
 */
-#define disparar 4
-#define IdaVolta 5
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+
+#define disparar 51
+#define IdaVolta 53
 
 long tempoTotal;
 int distancia;
+int serialRead = 0;
+
+float ultrassonic();
 
 void setup(){
   pinMode(disparar,OUTPUT);
   pinMode(IdaVolta,INPUT);
   Serial.begin(9600);
+  lcd.begin(16, 2);
   
   digitalWrite(disparar,LOW);
   
 }
 
 void loop(){
+  if (Serial.available() > 0) {
+    serialRead = Serial.read();
+    if (serialRead == 85){ // Letra U
+      distancia = ultrassonic();
+      lcd.clear();
+      lcd.print(distancia);     
+    }
+  }
+}
+
+float ultrassonic(){
   digitalWrite(disparar, HIGH);
   delayMicroseconds(10);
   digitalWrite(disparar, LOW);
-  
   tempoTotal = pulseIn(IdaVolta,HIGH);
   distancia = tempoTotal*0.034/2; // velocidade do som = 340m/s 
-   
-  Serial.println(distancia);
+  return distancia;
 }
