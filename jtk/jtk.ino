@@ -1,9 +1,9 @@
 /*
 Jhonatan da Silva
 Last Updated version :
-Wed Feb  8 23:39:02 2017
+Thu Feb  9 19:29:43 2017
 Number of code lines: 
-41
+47
 */
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
@@ -14,7 +14,6 @@ LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 long tempoTotal;
 int distancia;
 int serialRead = 0;
-
 float ultrassonic();
 
 void setup(){
@@ -28,16 +27,23 @@ void setup(){
 }
 
 void loop(){
-  if (Serial.available() > 0) {
-    serialRead = Serial.read();
-    if (serialRead == 85){ // Letra U
-      distancia = ultrassonic();
-      lcd.clear();
-      lcd.print(distancia);     
-    }
-  }
-}
+    if (Serial.available() > 0) {
+        serialRead = Serial.read();
+        lcd.clear();
+        lcd.print(serialRead);
+        switch(serialRead){
 
+            case 85:
+                distancia = ultrassonic();
+                break;
+
+            case 76:
+                lcd.clear();
+                lcd.print(?);
+                break;
+        }
+    }
+}
 float ultrassonic(){
   digitalWrite(disparar, HIGH);
   delayMicroseconds(10);
