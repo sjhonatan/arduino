@@ -1,9 +1,9 @@
 """
 Jhonatan da Silva
 Last Updated version :
-Thu Feb  9 19:29:46 2017
+Sat Feb 11 14:36:15 2017
 Number of code lines: 
-18
+21
 """
 import serial 
 import io
@@ -20,6 +20,9 @@ class Jtk():
     def ativarLCD(self):
         ser.write(b'L')
     
+    def carrinho(...):
+        ....
+
 while True:
     Jtk().ativarLCD()
-    time.sleep()
+    time.sleep(.1)
