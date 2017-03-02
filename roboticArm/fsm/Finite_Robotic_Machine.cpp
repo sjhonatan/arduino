@@ -4,11 +4,11 @@ Last Updated version :
 Mon Feb  6 16:20:09 2017
 Number of code lines: 
 112
-*/
-/*
+
   Finite_Robotic_Machine.cpp - Library for flashing Finite_Robotic_Machine code.
   Created by Jhonatan da Silva, November 30, 2016.
   Released into the public domain.
+
 */
 
 #include "Arduino.h"

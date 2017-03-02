@@ -59,6 +59,7 @@ float ultrassonic(){
  Start of the development of the class carrinho 
 
 */
+
 class Carrinho{
     public:
         carrinho(int EN1,int EN2,int IN1,int IN2,int IN3,int IN4);
