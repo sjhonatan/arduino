@@ -3,9 +3,9 @@
 /*
 Jhonatan da Silva
 Last Updated version :
-Wed Mar 15 13:42:11 2017
+Wed Mar 15 14:48:25 2017
 Number of code lines: 
-33
+34
 */
 int a0 = 0;
 int a1 = 1;
@@ -35,6 +35,7 @@ void loop(){
                 Serial.println(voltage[j]);
                 Serial.println(current[j]);
             }
+            send = false;
             send = false;
         }
       }
