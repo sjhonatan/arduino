@@ -1,5 +1,3 @@
-#!usr/bin/env
-# -*- coding: utf-8 -*-
 /*
 Jhonatan da Silva
 Last Updated version :
